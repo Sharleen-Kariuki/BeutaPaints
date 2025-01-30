@@ -9,7 +9,7 @@ const Contact = () => {
       <h1>Feel free to visit us</h1>
       <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Address: Beuta Paints Company, Opposite Zetech University</p>
       <p><FontAwesomeIcon icon={faEnvelope} /> Email: beutapaints@gmail.com</p>
-      <p><FontAwesomeIcon icon={faPhone} /> Phone: (+254) 0721483296</p>
+      <p><FontAwesomeIcon icon={faPhone} /> Phone: (+254) 0724330978</p>
     </div>
   )
 }

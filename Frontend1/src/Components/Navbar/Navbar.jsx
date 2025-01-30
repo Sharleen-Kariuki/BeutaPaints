@@ -30,7 +30,7 @@ function Navbar() {
         <li onClick={()=>{setMenu("kids")}}><Link style={{ textDecoration: 'none'}} to = '/contact'>Contact Us</Link> {menu==="kids"?<hr style={{border: '1px solid red'}}/>:<></>}</li>
      </ul>
      <div className="nav-login-cart">
-          <button ><FontAwesomeIcon icon={faPhone}/> 0712761716</button>
+          <button ><FontAwesomeIcon icon={faPhone}/> 0724330978</button>
      </div>
     </div>
   )
