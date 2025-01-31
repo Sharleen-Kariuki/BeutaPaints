@@ -30,7 +30,7 @@ const AddProduct = () => {
         let formData = new FormData();
         formData.append('product', image);
 
-        await fetch('https://beuta-paints-backend.vercel.app/upload',{
+        await fetch('https://beuta-paints-backend.onrender.com/upload',{
             method: 'POST',
             headers:{
                 Accept: 'application/json',
@@ -43,7 +43,7 @@ const AddProduct = () => {
             {
             product.image = responseData.image_url;
             console.log(product);
-            await fetch ('https://beuta-paints-backend.vercel.app/addproduct',{
+            await fetch ('https://beuta-paints-backend.onrender.com/addproduct',{
                 method: 'POST',
                 headers:{
                     Accept: 'application/json',
