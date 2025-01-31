@@ -51,6 +51,7 @@
 
 .nav-dropdown {
     display: none;
+    color: #ffffff;
    
 }
 
@@ -128,14 +129,16 @@
         width: auto;
         gap: 0;
     }
-    .nav-logo {
-        transform: scale(0.8);
-    }
+   
     .nav-menu {
+        display: none;
+        height: 50px;
+        width: 100%;
+        position: absolute;
         background: #233D4B;
-        height: 70px;
+        justify-content: center;
         top: 50px;
-        width: auto;
+        left: 0; 
     }
 
 }

@@ -22,7 +22,7 @@ function Navbar() {
         <div className='nav-logo'>
           <p>BEUTA PAINTS</p>
      </div> 
-     <img className="nav-dropdown" onClick={dropdown_toggle} src={dropdown_icon} alt="" /> 
+     <img className="nav-dropdown" onClick={dropdown_toggle} src={dropdown_icon} alt="" style={{ filter: 'invert(100%)' }} /> 
      <ul ref={menuRef} className="nav-menu">
         <li onClick={()=>{setMenu("shop")}}> <Link style={{ textDecoration: 'none'}} to = '/'>Home</Link> {menu==="shop"?<hr style={{border: '1px solid red'}}/>:<></>}</li>
         <li onClick={()=>{setMenu("mens")}}> <Link style={{ textDecoration: 'none'}} to = '/product'>Products</Link>{menu==="mens"?<hr style={{border: '1px solid red'}}/>:<></>}</li>
