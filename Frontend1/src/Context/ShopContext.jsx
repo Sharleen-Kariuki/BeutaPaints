@@ -10,7 +10,7 @@ const ShopContextProvider = (props) => {
     
     
    useEffect(() => {
-    fetch('http://localhost:4000/allproducts')
+    fetch('https://beuta-paints-backend.vercel.app/allproducts')
     .then((response)=>response.json())
     .then((data)=>setAll_product(data))
 
