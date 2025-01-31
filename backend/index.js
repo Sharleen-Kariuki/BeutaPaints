@@ -8,9 +8,7 @@ const path = require("path");
 const cors = require("cors");
 
 app.use(express.json());
-app.use(cors(
-
-));
+app.use(cors());
 
 //Database connection with mongoDB
 mongoose.connect("mongodb+srv://sharleenwambui28:Kariuki28@cluster0.t7ewm.mongodb.net/e-commerce", {
@@ -39,7 +37,7 @@ app.use('/images',express.static('upload/images'))
 app.post("/upload",upload.single('product'),(req,res)=>{
     res.json({
         success:1,
-        image_url:`http://localhost:${port}/images/${req.file.filename}`
+        image_url:`https://beuta-paints-backend.onrender.com/images/${req.file.filename}`
     }
     )
 }) 
