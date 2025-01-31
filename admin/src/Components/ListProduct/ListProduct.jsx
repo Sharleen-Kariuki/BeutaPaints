@@ -9,7 +9,7 @@ const ListProduct = () => {
   const [allproducts,setAllProducts] = useState([]);
 
   const fetchiInfo = async () =>{
-    await fetch('https://beuta-paints-backend.vercel.app/allproducts')
+    await fetch('https://beuta-paints-backend.onrender.com/allproducts')
     .then((res)=> res.json())
     .then((data)=>{setAllProducts(data)}) 
    }
@@ -19,7 +19,7 @@ const ListProduct = () => {
    },[])
 
    const remove_product =async (id)=>{
-    await fetch('https://beuta-paints-backend.vercel.app/removeproduct',{
+    await fetch('https://beuta-paints-backend.onrender.com/removeproduct',{
       method: 'POST',
       headers: {
         Accept: 'application/json',
