@@ -131,9 +131,8 @@
     }
    
     .nav-menu {
-        display: none;
         height: 50px;
-        width: 100%;
+        width: 88.5vw;
         position: absolute;
         background: #233D4B;
         justify-content: center;
