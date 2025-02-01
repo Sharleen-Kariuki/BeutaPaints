@@ -242,7 +242,7 @@
     }
 
     .productdisplay-main-img {
-        height: 300px;
+        height: auto;
     }
 
     .productdisplay-right {
@@ -284,6 +284,7 @@
 @media (max-width: 500px) {
     .productdisplay {
         margin: 0px 10px;
+        padding: 20px;
     }
 
     .productdisplay-left {
@@ -315,6 +316,7 @@
 
     .productdisplay-right-description {
         font-size: 10px;
+        padding: 0px 10px;
     }
 
     .productdisplay-right-size h1 {
