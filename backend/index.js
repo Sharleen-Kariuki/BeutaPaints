@@ -6,12 +6,6 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
-const AWS = require('aws-sdk');
-const s3 = new AWS.S3({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: process.env.AWS_REGION
-});
 
 app.use(express.json());
 app.use(cors());
@@ -36,27 +30,17 @@ const storage = multer.diskStorage({
 }
 )
 
-const upload = multer({ storage: multer.memoryStorage() });
+const upload = multer({storage:storage})
 
-app.post("/upload", upload.single('product'), (req, res) => {
-    const params = {
-        Bucket: process.env.AWS_S3_BUCKET_NAME,
-        Key: `${req.file.fieldname}_${Date.now()}${path.extname(req.file.originalname)}`,
-        Body: req.file.buffer,
-        ContentType: req.file.mimetype,
-        ACL: 'public-read'
-    };
-
-    s3.upload(params, (err, data) => {
-        if (err) {
-            return res.status(500).json({ error: "Error -> " + err });
-        }
-        res.json({
-            success: 1,
-            image_url: data.Location
-        });
-    });
-});
+//Creating upload Endpoint for image
+app.use('/images',express.static('upload/images'))
+app.post("/upload",upload.single('product'),(req,res)=>{
+    res.json({
+        success:1,
+              image_url: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+    }
+    )
+}) 
 
 //Schema for creating products
 const Product = mongoose.model("Product",{
