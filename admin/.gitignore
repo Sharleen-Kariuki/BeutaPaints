@@ -1,4 +1,4 @@
-# Logs
+Remove-Item .git\index.lock -Force# Logs
 logs
 *.log
 npm-debug.log*
